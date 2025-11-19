@@ -11,7 +11,7 @@ import (
 )
 
 const (
-	TIME_PERIOD_PRODUCER   = 500 * time.Millisecond
+	TIME_PERIOD_PRODUCER   = 100 * time.Millisecond
 	CRAWLER_CAPACITY       = 2
 	SIZE_QUEUE             = 1024
 	DEFAULT_COUNT_CRAWLERS = 2
@@ -156,15 +156,22 @@ func (cm *CrawlerManager) start() {
 
 	go func() {
 		for {
-			cm.lock.Lock()
-			for _, crawler := range cm.crawlers {
-				if crawler.isFree() {
-					url := cm.queue.next()
-					sendToCrawler(crawler, url)
+			url := cm.queue.next()
+			for {
+				cm.lock.Lock()
+				found := false
+				for _, crawler := range cm.crawlers {
+					if crawler.isFree() {
+						found = true
+						sendToCrawler(crawler, url)
+						break
+					}
+				}
+				cm.lock.Unlock()
+				if found {
 					break
 				}
 			}
-			cm.lock.Unlock()
 		}
 	}()
 

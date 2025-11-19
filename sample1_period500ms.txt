@@ -1,198 +1,166 @@
 http://google.com/0: Usual
 Current size of queue is 0, decreasing number of crawlers (currently 2) by 1
 http://google.com/1: Usual
-http://google.com/3: Usual
-http://google.com/2: Usual
-Current size of queue is 2, Number of crawlers (currently 1) is at its minimum
-http://google.com/4: Usual
 Current size of queue is 0, Number of crawlers (currently 1) is at its minimum
-http://google.com/5: Usual
+http://google.com/2: Usual
+Current size of queue is 0, Number of crawlers (currently 1) is at its minimum
+http://google.com/3: Usual
 Current size of queue is 1, Number of crawlers (currently 1) is at its minimum
-http://google.com/6: Usual
-Current size of queue is 3, Number of crawlers (currently 1) is at its minimum
-http://google.com/7: Slow!
+http://google.com/4: Slow!
+Current size of queue is 2, Number of crawlers (currently 1) is at its minimum
 Current size of queue is 4, Number of crawlers (currently 1) is at its minimum
+http://google.com/5: Slow!
 Current size of queue is 5, Number of crawlers (currently 1) is at its minimum
-http://google.com/8: Usual
 Current size of queue is 7, Number of crawlers (currently 1) is at its minimum
-http://google.com/9: Slow!
-Current size of queue is 7, Number of crawlers (currently 1) is at its minimum
-Current size of queue is 9, Number of crawlers (currently 1) is at its minimum
-http://google.com/10: Slow!
+http://google.com/6: Slow!
+Current size of queue is 8, Number of crawlers (currently 1) is at its minimum
 Current size of queue is 10, Number of crawlers (currently 1) is at its minimum
+http://google.com/7: Usual
+Current size of queue is 10, Number of crawlers (currently 1) is at its minimum
+http://google.com/8: Usual
 Current size of queue is 12, Number of crawlers (currently 1) is at its minimum
-http://google.com/11: Usual
-Current size of queue is 14, Number of crawlers (currently 1) is at its minimum
-http://google.com/12: Usual
+http://google.com/9: Slow!
+Current size of queue is 13, Number of crawlers (currently 1) is at its minimum
 Current size of queue is 15, Number of crawlers (currently 1) is at its minimum
-http://google.com/13: Usual
-Current size of queue is 15, Number of crawlers (currently 1) is at its minimum
-http://google.com/14: Usual
+http://google.com/10: Usual
 Current size of queue is 16, Number of crawlers (currently 1) is at its minimum
-http://google.com/15: Usual
+http://google.com/11: Slow!
 Current size of queue is 17, Number of crawlers (currently 1) is at its minimum
-http://google.com/16: Usual
-Current size of queue is 18, Number of crawlers (currently 1) is at its minimum
-http://google.com/17: Usual
-Current size of queue is 20, Number of crawlers (currently 1) is at its minimum
-http://google.com/18: Usual
-Current size of queue is 20, Number of crawlers (currently 1) is at its minimum
-http://google.com/19: Usual
-Current size of queue is 22, increasing number of crawlers (currently 1) by 1
-http://google.com/22: Slow!
-http://google.com/20: Usual
-Current size of queue is 20, decreasing number of crawlers (currently 2) by 1
-http://google.com/21: Usual
-Current size of queue is 22, increasing number of crawlers (currently 1) by 1
-http://google.com/27: Usual
-http://google.com/25: Usual
-Current size of queue is 18, decreasing number of crawlers (currently 2) by 1
-http://google.com/28: Usual
-http://google.com/26: Usual
-http://google.com/29: Usual
-http://google.com/30: Usual
-Current size of queue is 23, increasing number of crawlers (currently 1) by 1
-http://google.com/33: Slow!
-http://google.com/31: Slow!
-Current size of queue is 18, decreasing number of crawlers (currently 2) by 1
-Current size of queue is 21, increasing number of crawlers (currently 1) by 1
-http://google.com/37: Slow!
-http://google.com/32: Slow!
-Current size of queue is 18, decreasing number of crawlers (currently 2) by 1
-Current size of queue is 21, increasing number of crawlers (currently 1) by 1
-http://google.com/41: Usual
-http://google.com/36: Slow!
-Current size of queue is 19, decreasing number of crawlers (currently 2) by 1
-http://google.com/42: Usual
-http://google.com/43: Slow!
-http://google.com/40: Usual
-http://google.com/44: Usual
-Current size of queue is 25, increasing number of crawlers (currently 1) by 1
-http://google.com/47: Usual
-http://google.com/45: Slow!
-Current size of queue is 20, decreasing number of crawlers (currently 2) by 1
-http://google.com/48: Usual
-http://google.com/49: Usual
-http://google.com/46: Slow!
-Current size of queue is 25, increasing number of crawlers (currently 1) by 1
-http://google.com/52: Usual
-Current size of queue is 23, increasing number of crawlers (currently 2) by 1
-http://google.com/55: Slow!
-http://google.com/53: Slow!
-http://google.com/50: Slow!
-Current size of queue is 20, decreasing number of crawlers (currently 3) by 1
-http://google.com/56: Usual
-http://google.com/54: Usual
-http://google.com/51: Usual
-Current size of queue is 24, increasing number of crawlers (currently 2) by 1
-http://google.com/62: Slow!
-http://google.com/58: Slow!
-http://google.com/59: Slow!
-Current size of queue is 19, decreasing number of crawlers (currently 3) by 1
-Current size of queue is 21, increasing number of crawlers (currently 2) by 1
-http://google.com/67: Usual
-http://google.com/61: Usual
-http://google.com/60: Slow!
-Current size of queue is 17, decreasing number of crawlers (currently 3) by 1
-http://google.com/65: Slow!
-Current size of queue is 18, decreasing number of crawlers (currently 2) by 1
-http://google.com/66: Usual
-http://google.com/70: Usual
-http://google.com/71: Slow!
-http://google.com/72: Slow!
-Current size of queue is 27, increasing number of crawlers (currently 1) by 1
-http://google.com/73: Usual
-http://google.com/76: Usual
-Current size of queue is 23, increasing number of crawlers (currently 2) by 1
-http://google.com/79: Usual
-http://google.com/74: Usual
-http://google.com/77: Slow!
-Current size of queue is 20, decreasing number of crawlers (currently 3) by 1
-http://google.com/75: Slow!
-Current size of queue is 20, decreasing number of crawlers (currently 2) by 1
-http://google.com/78: Usual
-Current size of queue is 23, increasing number of crawlers (currently 1) by 1
-http://google.com/82: Usual
-http://google.com/85: Usual
-Current size of queue is 20, decreasing number of crawlers (currently 2) by 1
-http://google.com/87: Usual
-http://google.com/84: Usual
-http://google.com/86: Slow!
-http://google.com/88: Slow!
-Current size of queue is 27, increasing number of crawlers (currently 1) by 1
-http://google.com/89: Slow!
-http://google.com/92: Usual
-Current size of queue is 23, increasing number of crawlers (currently 2) by 1
-http://google.com/95: Slow!
-http://google.com/93: Usual
-Current size of queue is 21, increasing number of crawlers (currently 3) by 1
-http://google.com/99: Usual
-http://google.com/90: Slow!
-http://google.com/94: Usual
-Current size of queue is 17, decreasing number of crawlers (currently 4) by 1
-http://google.com/100: Usual
-http://google.com/96: Slow!
-http://google.com/98: Usual
-http://google.com/101: Slow!
-http://google.com/103: Slow!
-http://google.com/91: Usual
-http://google.com/97: Usual
-http://google.com/102: Usual
-http://google.com/104: Usual
-http://google.com/105: Usual
-Current size of queue is 24, increasing number of crawlers (currently 3) by 1
-http://google.com/112: Usual
-http://google.com/109: Slow!
-http://google.com/106: Usual
-http://google.com/115: Slow!
-Current size of queue is 13, decreasing number of crawlers (currently 4) by 1
-http://google.com/113: Usual
-http://google.com/107: Slow!
-http://google.com/110: Usual
-http://google.com/116: Slow!
-http://google.com/114: Usual
-http://google.com/111: Usual
-http://google.com/108: Usual
-http://google.com/117: Slow!
-Current size of queue is 24, increasing number of crawlers (currently 3) by 1
-http://google.com/124: Slow!
-http://google.com/118: Usual
-http://google.com/127: Usual
-http://google.com/121: Usual
-Current size of queue is 13, decreasing number of crawlers (currently 4) by 1
-http://google.com/128: Usual
-http://google.com/122: Usual
-http://google.com/119: Slow!
-http://google.com/125: Slow!
-http://google.com/123: Usual
-Current size of queue is 16, decreasing number of crawlers (currently 3) by 1
-http://google.com/120: Slow!
-Current size of queue is 15, decreasing number of crawlers (currently 2) by 1
-http://google.com/132: Usual
-http://google.com/133: Usual
-http://google.com/130: Usual
-http://google.com/131: Slow!
 Current size of queue is 19, Number of crawlers (currently 1) is at its minimum
-Current size of queue is 18, Number of crawlers (currently 1) is at its minimum
+http://google.com/12: Usual
 Current size of queue is 20, Number of crawlers (currently 1) is at its minimum
-http://google.com/135: Slow!
-Current size of queue is 22, increasing number of crawlers (currently 1) by 1
-http://google.com/138: Usual
+http://google.com/13: Usual
+Current size of queue is 21, increasing number of crawlers (currently 1) by 1
+http://google.com/16: Usual
+http://google.com/14: Usual
+Current size of queue is 19, decreasing number of crawlers (currently 2) by 1
+http://google.com/15: Usual
+Current size of queue is 19, Number of crawlers (currently 1) is at its minimum
+http://google.com/19: Usual
+Current size of queue is 21, increasing number of crawlers (currently 1) by 1
+http://google.com/22: Usual
+http://google.com/20: Slow!
+Current size of queue is 19, decreasing number of crawlers (currently 2) by 1
+Current size of queue is 21, increasing number of crawlers (currently 1) by 1
+http://google.com/26: Usual
+http://google.com/21: Slow!
+Current size of queue is 19, decreasing number of crawlers (currently 2) by 1
+Current size of queue is 21, increasing number of crawlers (currently 1) by 1
+http://google.com/30: Usual
+http://google.com/25: Slow!
+Current size of queue is 19, decreasing number of crawlers (currently 2) by 1
+http://google.com/31: Usual
+Current size of queue is 21, increasing number of crawlers (currently 1) by 1
+http://google.com/34: Slow!
+http://google.com/29: Slow!
+Current size of queue is 19, decreasing number of crawlers (currently 2) by 1
+http://google.com/35: Usual
+http://google.com/33: Usual
+http://google.com/36: Usual
+http://google.com/37: Usual
+Current size of queue is 25, increasing number of crawlers (currently 1) by 1
+http://google.com/40: Slow!
+http://google.com/38: Slow!
 Current size of queue is 20, decreasing number of crawlers (currently 2) by 1
-http://google.com/139: Usual
-http://google.com/136: Slow!
-Current size of queue is 23, increasing number of crawlers (currently 1) by 1
-http://google.com/142: Slow!
+http://google.com/41: Slow!
+http://google.com/39: Usual
+http://google.com/43: Slow!
+Current size of queue is 27, increasing number of crawlers (currently 1) by 1
+http://google.com/46: Usual
+Current size of queue is 23, increasing number of crawlers (currently 2) by 1
+http://google.com/49: Usual
+http://google.com/47: Usual
+http://google.com/44: Usual
+Current size of queue is 21, increasing number of crawlers (currently 3) by 1
+http://google.com/54: Slow!
+http://google.com/50: Usual
+http://google.com/48: Slow!
+http://google.com/45: Usual
+Current size of queue is 17, decreasing number of crawlers (currently 4) by 1
+http://google.com/51: Usual
+http://google.com/53: Usual
+http://google.com/55: Usual
+http://google.com/57: Slow!
+http://google.com/52: Usual
+http://google.com/59: Slow!
+Current size of queue is 21, increasing number of crawlers (currently 3) by 1
+http://google.com/65: Usual
+http://google.com/58: Slow!
+Current size of queue is 14, decreasing number of crawlers (currently 4) by 1
+http://google.com/66: Usual
+http://google.com/63: Slow!
+http://google.com/60: Slow!
+http://google.com/67: Usual
+http://google.com/62: Slow!
+http://google.com/64: Usual
+Current size of queue is 18, decreasing number of crawlers (currently 3) by 1
+http://google.com/61: Usual
+Current size of queue is 17, decreasing number of crawlers (currently 2) by 1
+http://google.com/68: Usual
+http://google.com/69: Slow!
+Current size of queue is 19, Number of crawlers (currently 1) is at its minimum
+Current size of queue is 20, Number of crawlers (currently 1) is at its minimum
+http://google.com/70: Usual
+Current size of queue is 21, increasing number of crawlers (currently 1) by 1
+http://google.com/74: Usual
+http://google.com/72: Usual
+Current size of queue is 18, decreasing number of crawlers (currently 2) by 1
+http://google.com/73: Usual
+Current size of queue is 20, Number of crawlers (currently 1) is at its minimum
+http://google.com/77: Usual
+Current size of queue is 21, increasing number of crawlers (currently 1) by 1
+http://google.com/80: Usual
+http://google.com/78: Usual
+Current size of queue is 19, decreasing number of crawlers (currently 2) by 1
+http://google.com/81: Usual
+http://google.com/79: Usual
+http://google.com/82: Usual
+http://google.com/83: Usual
+Current size of queue is 22, increasing number of crawlers (currently 1) by 1
+http://google.com/87: Usual
+http://google.com/85: Usual
+Current size of queue is 17, decreasing number of crawlers (currently 2) by 1
+http://google.com/88: Usual
+http://google.com/86: Slow!
+http://google.com/89: Slow!
+http://google.com/90: Usual
+Current size of queue is 24, increasing number of crawlers (currently 1) by 1
+http://google.com/93: Usual
+http://google.com/91: Usual
+Current size of queue is 20, decreasing number of crawlers (currently 2) by 1
+http://google.com/94: Slow!
+http://google.com/92: Usual
+http://google.com/96: Usual
+Current size of queue is 24, increasing number of crawlers (currently 1) by 1
+http://google.com/99: Usual
+http://google.com/97: Slow!
+Current size of queue is 19, decreasing number of crawlers (currently 2) by 1
+Current size of queue is 22, increasing number of crawlers (currently 1) by 1
+http://google.com/103: Usual
+http://google.com/98: Usual
+Current size of queue is 20, decreasing number of crawlers (currently 2) by 1
+http://google.com/102: Usual
+Current size of queue is 21, increasing number of crawlers (currently 1) by 1
+http://google.com/108: Slow!
+http://google.com/106: Slow!
+Current size of queue is 19, decreasing number of crawlers (currently 2) by 1
+http://google.com/109: Usual
+http://google.com/107: Usual
+http://google.com/110: Usual
+http://google.com/111: Usual
+Current size of queue is 25, increasing number of crawlers (currently 1) by 1
+http://google.com/114: Usual
+http://google.com/112: Slow!
 Current size of queue is 21, increasing number of crawlers (currently 2) by 1
-http://google.com/145: Usual
-http://google.com/137: Slow!
+http://google.com/118: Usual
+http://google.com/115: Usual
 Current size of queue is 19, decreasing number of crawlers (currently 3) by 1
-http://google.com/146: Usual
-http://google.com/143: Usual
-http://google.com/147: Slow!
-http://google.com/144: Usual
-http://google.com/141: Slow!
-Current size of queue is 25, increasing number of crawlers (currently 2) by 1
-http://google.com/150: Usual
-http://google.com/153: Slow!
-http://google.com/148: Usual
+http://google.com/119: Usual
+http://google.com/116: Usual
+http://google.com/113: Usual
+http://google.com/120: Usual
+http://google.com/121: Usual
+http://google.com/117: Slow!
+Current size of queue is 23, increasing number of crawlers (currently 2) by 1
+http://google.com/126: Usual
+http://google.com/124: Usual
