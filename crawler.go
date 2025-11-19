@@ -60,12 +60,14 @@ type Crawler struct {
 	stopOnce   sync.Once
 	stopped    atomic.Bool // check if a lock is a better idea here
 	stopSignal chan struct{}
+	doneSignal chan struct{}
 }
 
 func NewCrawler() *Crawler {
 	return &Crawler{
 		incoming:   make(chan string, CRAWLER_CAPACITY),
-		stopSignal: make(chan struct{}),
+		stopSignal: make(chan struct{}, 1),
+		doneSignal: make(chan struct{}, CRAWLER_CAPACITY),
 	}
 }
 
@@ -81,14 +83,13 @@ func (c *Crawler) start() {
 				}
 				c.crawl(url)
 			case <-c.stopSignal:
+				for url := range c.incoming {
+					c.crawl(url)
+				}
 				return
 			}
 		}
 	}()
-}
-
-func (c *Crawler) isFree() bool {
-	return len(c.incoming) < cap(c.incoming)
 }
 
 func (c *Crawler) consume(url string) error {
@@ -108,8 +109,8 @@ func (c *Crawler) stop() {
 	c.stopOnce.Do(func() {
 		c.stopped.Store(true)
 		c.stopSignal <- struct{}{}
-		c.wg.Wait()
 		close(c.incoming)
+		c.wg.Wait()
 	})
 }
 
@@ -122,53 +123,46 @@ func (c *Crawler) crawl(url string) {
 		fmt.Printf("%s: Usual\n", url)
 		time.Sleep(1 * time.Second)
 	}
-
+	c.doneSignal <- struct{}{}
 }
 
 type CrawlerManager struct {
-	lock     sync.Mutex
-	crawlers []*Crawler
+	crawlerPool chan *Crawler
+	numCrawlers int
 
 	queue *Queue
 }
 
 func NewCrawlerManager(q *Queue) *CrawlerManager {
-	crawlers := make([]*Crawler, DEFAULT_COUNT_CRAWLERS)
-	for i := range DEFAULT_COUNT_CRAWLERS {
-		crawlers[i] = NewCrawler()
+	crawlerPool := make(chan *Crawler, 100000)
+	for range DEFAULT_COUNT_CRAWLERS {
+		newCrawler := NewCrawler()
+		newCrawler.start()
+		crawlerPool <- newCrawler
 	}
 	return &CrawlerManager{
-		crawlers: crawlers,
-		queue:    q,
+		numCrawlers: DEFAULT_COUNT_CRAWLERS,
+		crawlerPool: crawlerPool,
+		queue:       q,
 	}
 }
 
 func (cm *CrawlerManager) start() {
-	sendToCrawler := func(crawler *Crawler, url string) {
-		err := crawler.consume(url)
-		if err == ErrCrawlerStopped {
-			return
-		}
-	}
-	for i := range DEFAULT_COUNT_CRAWLERS {
-		cm.crawlers[i].start()
-	}
-
 	go func() {
 		for {
 			url := cm.queue.next()
 			for {
-				cm.lock.Lock()
-				found := false
-				for _, crawler := range cm.crawlers {
-					if crawler.isFree() {
-						found = true
-						sendToCrawler(crawler, url)
-						break
-					}
-				}
-				cm.lock.Unlock()
-				if found {
+				crawler := <-cm.crawlerPool
+				err := crawler.consume(url)
+				if err == ErrCrawlerStopped {
+					continue
+				} else if err == ErrCrawlerFull {
+					go func() {
+						<-crawler.doneSignal
+						cm.crawlerPool <- crawler
+					}()
+				} else {
+					cm.crawlerPool <- crawler
 					break
 				}
 			}
@@ -176,29 +170,24 @@ func (cm *CrawlerManager) start() {
 	}()
 
 	go func() {
-		count := DEFAULT_COUNT_CRAWLERS
 		ticker := time.NewTicker(1000 * time.Millisecond)
 		for range ticker.C {
 			currSize := cm.queue.size()
 			if currSize > 20 {
-				fmt.Printf("Current size of queue is %d, increasing number of crawlers (currently %d) by 1\n", currSize, len(cm.crawlers))
+				fmt.Printf("Current size of queue is %d, increasing number of crawlers (currently %d) by 1\n", currSize, cm.numCrawlers)
 				newCrawler := NewCrawler()
-				cm.lock.Lock()
-				cm.crawlers = append(cm.crawlers, newCrawler)
-				count++
 				newCrawler.start()
-				cm.lock.Unlock()
+				cm.crawlerPool <- newCrawler
+				cm.numCrawlers++
 			} else {
-				if len(cm.crawlers) == MIN_CRAWLERS {
-					fmt.Printf("Current size of queue is %d, Number of crawlers (currently %d) is at its minimum\n", currSize, len(cm.crawlers))
+				if cm.numCrawlers == MIN_CRAWLERS {
+					fmt.Printf("Current size of queue is %d, Number of crawlers (currently %d) is at its minimum\n", currSize, cm.numCrawlers)
 					continue
 				}
-				fmt.Printf("Current size of queue is %d, decreasing number of crawlers (currently %d) by 1\n", currSize, len(cm.crawlers))
-				cm.lock.Lock()
-				lastCrawler := cm.crawlers[len(cm.crawlers)-1]
-				cm.crawlers = cm.crawlers[:len(cm.crawlers)-1]
-				lastCrawler.stop()
-				cm.lock.Unlock()
+				fmt.Printf("Current size of queue is %d, decreasing number of crawlers (currently %d) by 1\n", currSize, cm.numCrawlers)
+				lastCrawler := <-cm.crawlerPool
+				cm.numCrawlers--
+				go lastCrawler.stop()
 			}
 		}
 	}()
